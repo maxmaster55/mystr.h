@@ -52,6 +52,14 @@ int memcmp(const void *str1, const void *str2, size_t n)
     return 0;
 }
 
+/**
+ * @brief copies from src to with the number of bytes n
+ *
+ * @param dest
+ * @param src
+ * @param n
+ * @return void*
+ */
 void *memcpy(void *dest, const void *src, size_t n)
 {
     for (size_t i = 0; i < n; i++)
@@ -59,4 +67,14 @@ void *memcpy(void *dest, const void *src, size_t n)
         *(char *)(dest + i) = *(char *)(src + i);
     }
     return dest;
+}
+
+void *memmove(void *str1, const void *str2, size_t n)
+{
+    char *ptr1 = (char *)str1;
+    const char *ptr2 = (char *)str2;
+    for (size_t i = 0; i < n; i++)
+    {
+        ptr1[i] = ptr2[i];
+    }
 }
