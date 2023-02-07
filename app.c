@@ -3,7 +3,13 @@
 
 int main(void)
 {
-    char *hi = "hello from hell";
+    const char str[] = "http://www.tutorialspoint.com";
+    const char ch = '.';
+    char *ret;
 
-    printf("the size is: %d\n", strlen(hi));
+    ret = memchr(str, ch, strlen(str));
+
+    printf("String after |%c| is - |%s|\n", ch, ret);
+
+    return (0);
 }
