@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include "mystr.h"
 
 int main(void)
 {
-    printf("Hello World\n");
+    char *hi = "hello from hell";
+
+    printf("the size is: %d\n", strlen(hi));
 }
