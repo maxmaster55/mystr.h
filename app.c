@@ -3,11 +3,11 @@
 
 int main()
 {
-    char str[50] = "This is string.h library function";
-    puts(str);
+    char src[50] = "This is source";
+    char dest[50] = "This is destination";
 
-    memset(str + 5, '$', 7);
-    puts(str);
+    strcat(dest, src);
 
+    printf("Final destination string : |%s|", dest);
     return (0);
 }

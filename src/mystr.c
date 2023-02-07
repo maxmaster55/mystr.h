@@ -87,3 +87,15 @@ void *memset(void *str, int c, size_t n)
         ptr[i] = c;
     }
 }
+
+char *strcat(char *dest, const char *src)
+{
+    size_t len_dest = strlen(dest);
+    size_t len_src = strlen(src);
+    size_t total = len_dest + len_src;
+    for (size_t i = 0; i < total; i++)
+    {
+        dest[i + len_dest - 1] = src[i];
+    }
+    return dest;
+}
