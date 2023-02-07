@@ -3,12 +3,11 @@
 
 int main()
 {
-    char dest[] = "oldstring";
-    const char src[] = "newstring";
+    char str[50] = "This is string.h library function";
+    puts(str);
 
-    printf("Before memmove dest = %s, src = %s\n", dest, src);
-    memmove(dest, src, 9);
-    printf("After memmove dest = %s, src = %s\n", dest, src);
+    memset(str + 5, '$', 7);
+    puts(str);
 
     return (0);
 }

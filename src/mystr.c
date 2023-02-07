@@ -78,3 +78,12 @@ void *memmove(void *str1, const void *str2, size_t n)
         ptr1[i] = ptr2[i];
     }
 }
+
+void *memset(void *str, int c, size_t n)
+{
+    char *ptr = (char *)str;
+    for (size_t i = 0; i < n; i++)
+    {
+        ptr[i] = c;
+    }
+}
