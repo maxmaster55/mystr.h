@@ -3,24 +3,12 @@
 
 int main()
 {
-    char str1[15];
-    char str2[15];
-    int ret;
-
-    ret = memcmp("abc", "abc", 3);
-
-    if (ret > 0)
-    {
-        printf("str2 is less than str1: %d", ret);
-    }
-    else if (ret < 0)
-    {
-        printf("str1 is less than str2: %d", ret);
-    }
-    else
-    {
-        printf("str1 is equal to str2");
-    }
+    const char src[50] = "http://www.tutorialspoint.com";
+    char dest[50];
+    strcpy(dest, "Heloooo!!");
+    printf("Before memcpy dest = %s\n", dest);
+    memcpy(dest, src, strlen(src) + 1);
+    printf("After memcpy dest = %s\n", dest);
 
     return (0);
 }
