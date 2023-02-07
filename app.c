@@ -3,11 +3,20 @@
 
 int main()
 {
-    char src[50] = "This is source";
-    char dest[50] = "This is destination";
+    char str[80] = "This is - www.tutorialspoint.com - website";
+    const char s[2] = "-";
+    char *token;
 
-    strcat(dest, src);
+    /* get the first token */
+    token = strtok(str, s);
 
-    printf("Final destination string : |%s|", dest);
+    /* walk through other tokens */
+    while (token != NULL)
+    {
+        printf(" %s\n", token);
+
+        token = strtok(token, s);
+    }
+
     return (0);
 }

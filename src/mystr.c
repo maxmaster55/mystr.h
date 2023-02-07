@@ -99,3 +99,54 @@ char *strcat(char *dest, const char *src)
     }
     return dest;
 }
+
+/**
+ * @brief searches for the first occurrence of the character c (an unsigned char) in the string pointed to by the argument str.
+ *
+ * @param str
+ * @param c
+ * @return char*
+ */
+char *strchr(const char *str, int c)
+{
+    size_t len = strlen(str);
+    for (size_t i = 0; i < len; i++)
+    {
+        if (str[i] == c)
+        {
+            return (str + i);
+        }
+    }
+    return NULL;
+}
+
+// FIXME: Segmentation fault :(
+char *strtok(char *str, const char *delim)
+{
+    size_t len = strlen(str);
+    size_t len_delim = strlen(delim);
+    static char *next = NULL;
+
+    int match_num = 0;
+    size_t i = 0;
+    size_t j = 0;
+    for (i = 0; i < len; i++)
+    {
+        for (j = 0; j < len_delim; j++)
+        {
+            if (str[i + j] == delim[j])
+            {
+                match_num++;
+            }
+            if (match_num == len_delim)
+            {
+                match_num = 0;
+                next = str + i + 1;
+                goto ret_loc;
+            }
+        }
+    }
+
+ret_loc:
+    return memset(str, '\0', i);
+}
