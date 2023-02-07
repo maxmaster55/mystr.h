@@ -1,15 +1,26 @@
 #include <stdio.h>
-#include "mystr.h"
+#include <mystr.h>
 
-int main(void)
+int main()
 {
-    const char str[] = "http://www.tutorialspoint.com";
-    const char ch = '.';
-    char *ret;
+    char str1[15];
+    char str2[15];
+    int ret;
 
-    ret = memchr(str, ch, strlen(str));
+    ret = memcmp("abc", "abc", 3);
 
-    printf("String after |%c| is - |%s|\n", ch, ret);
+    if (ret > 0)
+    {
+        printf("str2 is less than str1: %d", ret);
+    }
+    else if (ret < 0)
+    {
+        printf("str1 is less than str2: %d", ret);
+    }
+    else
+    {
+        printf("str1 is equal to str2");
+    }
 
     return (0);
 }
