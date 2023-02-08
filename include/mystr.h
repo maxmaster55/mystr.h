@@ -21,5 +21,3 @@ void *memset(void *str, int c, size_t n);
 char *strcat(char *dest, const char *src);
 
 char *strchr(const char *str, int c);
-
-char *strtok(char *str, const char *delim);
