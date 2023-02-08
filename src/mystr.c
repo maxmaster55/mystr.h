@@ -109,12 +109,13 @@ char *strcat(char *dest, const char *src)
  */
 char *strchr(const char *str, int c)
 {
+    char *ptr = (char *)str;
     size_t len = strlen(str);
     for (size_t i = 0; i < len; i++)
     {
         if (str[i] == c)
         {
-            return (str + i);
+            return (ptr + i);
         }
     }
     return NULL;
