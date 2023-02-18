@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <mystr.h>
+#include <stdlib.h>
 
 int main()
 {

@@ -1,5 +1,5 @@
 {
     "files.associations": {
-        "mystr.h": "c"
+        "stack": "c"
     }
 }
