@@ -9,5 +9,5 @@ include_directories("C:/MinGW/include" "./include")
 project(EmbeddedDiploma)
 
 
-add_executable(EmbeddedDiploma app.c src/stackpp.c)
+add_executable(EmbeddedDiploma app.c src/queue.c)
 
