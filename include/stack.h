@@ -12,8 +12,7 @@ typedef struct
     uint32_t data[STACK_MAX_SIZE];
 } stack_t;
 
-typedef enum
-{
+typedef enum {
     STACK_FULL,
     STACK_EMPTY,
     STACK_NOT_FULL,
